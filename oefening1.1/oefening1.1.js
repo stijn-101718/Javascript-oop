@@ -1,22 +1,12 @@
-function leerling(Studentennaam, leerjaar, aantallesuren, aantalvakken){
+function leerling(Studentennaam, leerjaar, aantallesuren, aantalvakken, aantallesurenpervak){
     this.Studentennaam = Studentennaam;
     this.leerjaar = leerjaar;
     this.aantallesuren = aantallesuren;
     this.aantalvakken = aantalvakken;
-
-    
-
+    this.aantallesurenpervak = aantallesuren/aantalvakken;
 }
 
 
-let student = { 
-    Studentennaam: "Stijn",
-    leerjaar: "2",
-    aantallesuren: "32",
-    aantalvakken: "6",
-    berekenurenpervak: function() {
-        return this.aantallesuren / this.aantalvakken;
-    }
-};
+let leerling1 = new leerling("Stijn", 2, 32, 6, 32/6);
 
-console.log(student.berekenurenpervak());
+console.log(leerling1);
