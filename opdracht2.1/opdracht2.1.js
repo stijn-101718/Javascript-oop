@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 
-// Definieer eerst je class Student!
+
 class Student {
     constructor(Studentennaam, studentnummer, klas, leerjaar, aantallesuren, aantalvakken, vakken) {
         this.Studentennaam = Studentennaam;
@@ -19,12 +19,12 @@ class Student {
     }
 }
 
-// JSON inlezen
+
 
 const data = fs.readFileSync('oefening2.1/oefening2.1.json', 'utf-8');
 const studenten = JSON.parse(data);
 
-// Instances maken en groet aanroepen
+
 studenten.forEach(item => {
     const leerling = new Student(
         item.Studentennaam,
